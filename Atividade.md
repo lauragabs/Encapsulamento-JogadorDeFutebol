@@ -23,13 +23,12 @@ aposenta aos 38 anos. Esse método deve retornar uma String na forma:
 Faltam xx anos para o jogador Fulano se aposentar.
 
 
-## Responda : 
+## Respostas às Questões
 
-b) Coloque o atributo nome como privativo e execute o programa. O que acontece?
-Explique.
+**b) O que acontece ao tornar o atributo `nome` privado? Explique.**
 
-    Deu erro na classe App,  pois o atributo nome foi declarado como privado na classe JogadorDeFutebol.
-    "The method nome() is undefined for the type JogadorDeFutebolJava(67108964)"
-    
-c) Crie um método getter na classe JogadorDeFutebol para solucionar o problema
-anterior e execute.
+Ao tornar o atributo `nome` privado, ele não fica acessível fora da classe `JogadorDeFutebol`, resultando em um erro de acesso na classe `App`. O erro ocorre porque o atributo `nome` foi declarado como privado, o que impede o acesso direto a ele fora da classe onde foi declarado.
+
+**c) Solução com um método getter**
+
+Para corrigir o problema de acesso ao atributo privado `nome`, foi implementado um método `getNome()` na classe `JogadorDeFutebol`. O getter permite que outras classes acessem o valor do nome, mantendo o encapsulamento e o controle de acesso sobre o atributo.
